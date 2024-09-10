@@ -1,0 +1,86 @@
+[36m[2024-09-10 09:19:17,969][82355] register_encoder_factory: <function make_quadmulti_encoder at 0x7f01c6258670>[0m
+[33m[2024-09-10 09:19:18,031][82355] Loading existing experiment configuration from ./train_dir/default_experiment/config.json[0m
+[36m[2024-09-10 09:19:18,032][82355] Overriding arg 'train_dir' with value './train_dir' passed from command line[0m
+[36m[2024-09-10 09:19:18,032][82355] Overriding arg 'quads_use_numba' with value False passed from command line[0m
+[36m[2024-09-10 09:19:18,032][82355] Overriding arg 'replay_buffer_sample_prob' with value 0.0 passed from command line[0m
+[36m[2024-09-10 09:19:18,033][82355] Overriding arg 'quads_view_mode' with value ['topdown'] passed from command line[0m
+[36m[2024-09-10 09:19:18,033][82355] Overriding arg 'quads_render' with value True passed from command line[0m
+[36m[2024-09-10 09:19:18,033][82355] Adding new argument 'fps'=0 that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,033][82355] Adding new argument 'eval_env_frameskip'=None that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,033][82355] Adding new argument 'no_render'=False that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,034][82355] Adding new argument 'save_video'=False that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,034][82355] Adding new argument 'video_frames'=1000000000.0 that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,034][82355] Adding new argument 'video_name'=None that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,034][82355] Adding new argument 'max_num_frames'=1000000000.0 that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,034][82355] Adding new argument 'max_num_episodes'=1000000000.0 that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,035][82355] Adding new argument 'push_to_hub'=False that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,035][82355] Adding new argument 'hf_repository'=None that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,035][82355] Adding new argument 'policy_index'=0 that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,035][82355] Adding new argument 'eval_deterministic'=False that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,035][82355] Adding new argument 'train_script'=None that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,036][82355] Adding new argument 'enjoy_script'=None that is not in the saved config file![0m
+[36m[2024-09-10 09:19:18,036][82355] Using frameskip 1 and render_action_repeat=1 for evaluation[0m
+/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+[33m[2024-09-10 09:19:18,362][82355] Loading state from checkpoint ./train_dir/default_experiment/checkpoint_p0/checkpoint_000000980_1003520.pth...[0m
+/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/sample_factory/algo/learning/learner.py:281: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_dict = torch.load(latest_checkpoint, map_location=device)
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/pyglet/__init__.py", line 336, in __getattr__
+    return getattr(self._module, name)
+AttributeError: 'NoneType' object has no attribute '_create_shadow_window'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/quad-swarm-rl/swarm_rl/enjoy.py", line 17, in <module>
+    sys.exit(main())
+  File "/root/quad-swarm-rl/swarm_rl/enjoy.py", line 12, in main
+    status = enjoy(cfg)
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/sample_factory/enjoy.py", line 169, in enjoy
+    last_render_start = render_frame(cfg, env, video_frames, num_episodes, last_render_start)
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/sample_factory/enjoy.py", line 78, in render_frame
+    env.render()
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/gymnasium/core.py", line 418, in render
+    return self.env.render()
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/gymnasium/core.py", line 418, in render
+    return self.env.render()
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/gymnasium/core.py", line 418, in render
+    return self.env.render()
+  File "/root/quad-swarm-rl/swarm_rl/env_wrappers/compatibility.py", line 57, in render
+    return self.env.render()
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/gymnasium/core.py", line 418, in render
+    return self.env.render()
+  File "/root/quad-swarm-rl/gym_art/quadrotor_multi/quadrotor_multi.py", line 730, in render
+    self.init_scene_multi()
+  File "/root/quad-swarm-rl/gym_art/quadrotor_multi/quadrotor_multi.py", line 330, in init_scene_multi
+    self.scenes.append(Quadrotor3DSceneMulti(
+  File "/root/quad-swarm-rl/gym_art/quadrotor_multi/quadrotor_multi_visualization.py", line 124, in __init__
+    self.pygl_window = __import__('pyglet.window', fromlist=['key'])
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/pyglet/window/__init__.py", line 1918, in <module>
+    gl._create_shadow_window()
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/pyglet/__init__.py", line 342, in __getattr__
+    __import__(import_name)
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/pyglet/gl/__init__.py", line 95, in <module>
+    from pyglet.gl.gl import *
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/pyglet/gl/gl.py", line 45, in <module>
+    from pyglet.gl.lib import link_GL as _link_function
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/pyglet/gl/lib.py", line 149, in <module>
+    from pyglet.gl.lib_glx import link_GL, link_GLU, link_GLX
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/pyglet/gl/lib_glx.py", line 46, in <module>
+    glu_lib = pyglet.lib.load_library('GLU')
+  File "/root/miniconda3/envs/swarm-rl/lib/python3.8/site-packages/pyglet/lib.py", line 164, in load_library
+    raise ImportError('Library "%s" not found.' % names[0])
+ImportError: Library "GLU" not found.
+Observation components: ['xyz', 'vxyz', 'R', 'omega', 'floor', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'octmap']
+Observation components: ['xyz', 'vxyz', 'R', 'omega', 'floor', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'octmap']
+Observation components: ['xyz', 'vxyz', 'R', 'omega', 'floor', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'octmap']
+Observation components: ['xyz', 'vxyz', 'R', 'omega', 'floor', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'octmap']
+Observation components: ['xyz', 'vxyz', 'R', 'omega', 'floor', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'octmap']
+Observation components: ['xyz', 'vxyz', 'R', 'omega', 'floor', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'octmap']
+Observation components: ['xyz', 'vxyz', 'R', 'omega', 'floor', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'octmap']
+Observation components: ['xyz', 'vxyz', 'R', 'omega', 'floor', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'rxyz', 'rvxyz', 'octmap']
