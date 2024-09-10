@@ -11,6 +11,5 @@ _results
 *.ipynb
 *.wpr
 *.cprof
-*.egg-info/
-train_dir/
+*.egg-info
 wandb/
